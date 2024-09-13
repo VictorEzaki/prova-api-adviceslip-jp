@@ -6,3 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+*{
+  --background-components-color: #F2DE79;
+  --background-color: #F2E7AC;
+}
