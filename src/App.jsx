@@ -2,9 +2,9 @@ import './App.css'
 import Header from './components/Header'
 import Home from './pages/Home'
 import ApiAdvices from './pages/ApiAdvices'
-import About from './pages/About'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
+import Collaborators from './pages/Collaborators'
 
 export default function App() {
 
@@ -14,7 +14,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ApiAdvices' element={<ApiAdvices />} />
-        <Route path='/About' element={<About />} />
+        <Route path='/Collaborators' element={<Collaborators />} />
       </Routes>
       <Footer />
     </>
