@@ -1,0 +1,14 @@
+@import 'reset-css/reset.css';
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*{
+  --background-components-color: #F2DE79;
+  --background-color: #F2E7AC;
+}

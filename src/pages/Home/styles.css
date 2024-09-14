@@ -1,0 +1,22 @@
+#main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#main-content #main-title{
+    font-size: 3rem;
+}
+
+#main-content #main-subtitle{
+    font-size: 2rem;
+}
+#main-content #main-paragraph{
+    font-size: 1.3rem;
+}
+
+#img{
+    width: 600px;
+    height: 450px;
+}
