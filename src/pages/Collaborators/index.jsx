@@ -15,7 +15,7 @@ export default function Collaborators() {
                     <div>
                         <h3>Responsabilidades:</h3> 
                         <p className='collab-paragraph'>
-                        &nbsp;     Fui responsável pela escolha das cores do projeto, além de trabalhar no conteúdo e na estilização dos componentes. No entanto, minha principal contribuição foi na página de API, onde realizei a requisição dos dados (fetch) cuidando também da estilização.
+                            Fui responsável pela escolha das cores do projeto, além de trabalhar no conteúdo e na estilização dos componentes. No entanto, minha principal contribuição foi na página de API, onde realizei a requisição dos dados (fetch) cuidando também da estilização.
                         </p>
                     </div>
                     <div>
@@ -39,7 +39,7 @@ export default function Collaborators() {
                     <div>
                         <h3>Responsabilidades: </h3> 
                         <p className='collab-paragraph'>
-                        &nbsp; Fui responsável por analisar a documentação do API junto do meu colega de grupo, por criar a estrutura do projeto, como as pastas compenents e pages, bem como as demais pastas. Minha principal contribuição foi com a página Home.
+                            Fui responsável por analisar a documentação do API junto do meu colega de grupo, por criar a estrutura do projeto, como as pastas compenents e pages, bem como as demais pastas. Minha principal contribuição foi com a página Home.
                         </p>
                     </div>
                     <div>
