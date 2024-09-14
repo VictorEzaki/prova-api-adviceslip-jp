@@ -1,3 +1,24 @@
 #header{
     background-color: var(--background-components-color);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#header #header-title{
+    font-size: 3rem;
+}
+
+#header #nav{
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#header nav a{
+    text-decoration: none;
+    color: black;
+}
+#header nav a:hover{
 }
