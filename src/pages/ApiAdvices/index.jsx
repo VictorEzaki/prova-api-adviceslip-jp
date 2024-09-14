@@ -21,8 +21,11 @@ export default function ApiAdvices() {
   return (
     <div id='api'>
       <h1 id='api-title'>Conselho do Dia</h1>
-      <p id='advice'>{advice ? advice : 'Carregando...'}</p>
-      <button onClick={fetchAdvice}>Obter novo conselho</button>
+      <p id='advice'>
+        <div id='point'></div>
+        <span id='text'>"{advice ? advice : 'Carregando...'}"</span>
+      </p>
+        <button onClick={fetchAdvice}>Obter novo conselho</button>
     </div>
   );
 }
