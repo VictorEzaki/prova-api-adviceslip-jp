@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css'
 
-export default function App() {
+export default function ApiAdvices() {
   const [advice, setAdvice] = useState('');
 
   async function fetchAdvice() {
@@ -19,9 +19,9 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Conselho do Dia</h1>
-      <p>{advice ? advice : 'Carregando...'}</p>
+    <div id='api'>
+      <h1 id='api-title'>Conselho do Dia</h1>
+      <p id='advice'>{advice ? advice : 'Carregando...'}</p>
       <button onClick={fetchAdvice}>Obter novo conselho</button>
     </div>
   );
