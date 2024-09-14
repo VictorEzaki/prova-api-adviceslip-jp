@@ -15,6 +15,7 @@ export default function Home (){
             <p id='main-paragraph'>
                 Ao acessar a página "API", você será redirecionado para uma página com o subtítulo "Conselho do Dia" e com um conselho aleatório automaticamente gerado abaixo. 
             </p>
+            <img src='/src/components/fts/exemplo.png' id='img'/>
             <p id='main-paragraph'>
                 Ao clicar no botão "Obter novo conselho", você também pode trocar de conselho quantas vezes você quiser.
             </p>
