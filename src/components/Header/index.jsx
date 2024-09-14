@@ -9,7 +9,7 @@ export default function Header (){
             <nav id='nav'>
                 <Link to="/">Home</Link>
                 <Link to="/ApiAdvices">API</Link>
-                <Link to="/Collaborators">About</Link>
+                <Link to="/Collaborators">Colaboradores</Link>
             </nav>
         </header>
     )
