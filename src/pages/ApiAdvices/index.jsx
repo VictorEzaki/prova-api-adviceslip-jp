@@ -25,7 +25,7 @@ export default function ApiAdvices() {
         <div id='point'></div>
         <span id='text'>"{advice ? advice : 'Carregando...'}"</span>
       </p>
-        <button onClick={fetchAdvice}>Obter novo conselho</button>
+      <button onClick={fetchAdvice}>Obter novo conselho</button>
     </div>
   );
 }
