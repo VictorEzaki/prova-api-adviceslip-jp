@@ -1,60 +1,28 @@
-import { useEffect, useState } from 'react'
-import PostIt from '../../components/PostIt'
+import React, { useState, useEffect } from 'react';
 import './styles.css'
 
-const mock = [
-    {
+export default function App() {
+  const [advice, setAdvice] = useState('');
 
-        "slip": {
-        "id": 1,
-        "advice": "Remember that spiders are more afraid of you, than you are of them."
-        }
+  async function fetchAdvice() {
+    try {
+      const response = await fetch('https://api.adviceslip.com/advice');
+      const data = await response.json();
+      setAdvice(data.slip.advice);
+    } catch (error) {
+      console.error('Erro ao buscar conselho:', error);
     }
-]
+  }
 
-export default function ApiAdvices (){
-    const [ conteudo, setConteudo ] = useState(<></>)
-    // const [ generate, setGenerate ] = useState(1)
+  useEffect(() => {
+    fetchAdvice();
+  }, []);
 
-    async function getAdvice() {
-        const reqOptions = {
-            method: 'GET',
-            redirect: 'follow'
-        }
-
-        const response = await fetch(
-            'https://api.adviceslip.com/advice',
-            reqOptions
-        )
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
-        }
-
-        const data = await response.json();
-
-        return data
-    }
-
-    async function buildPost() {
-        const consult = await getAdvice()
-
-        return consult.slip.map(slip => <PostIt data={slip} />)
-    }
-
-    useEffect(() => {
-        async function getConteudo() {
-            setConteudo(await buildPost())
-        }
-
-        getConteudo()
-    }, [])
-
-
-
-    return(
-        <div id='api'>
-            { conteudo }
-        </div>
-    )
+  return (
+    <div>
+      <h1>Conselho do Dia</h1>
+      <p>{advice ? advice : 'Carregando...'}</p>
+      <button onClick={fetchAdvice}>Obter novo conselho</button>
+    </div>
+  );
 }

@@ -1,9 +1,9 @@
 import './styles.css'
 
-export default function PostIt({ data: slip }) {
+export default function PostIt({ data: slips }) {
     return(
         <>
-            { slip.advice }
+            { slips.advice }
         </>
     )
 }
