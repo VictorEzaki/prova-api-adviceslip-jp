@@ -1,31 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import './styles.css'
+import { useState } from 'react';
+import './styles.css';
+import { useEffect } from 'react';
+
+const mock = {
+  results: [{
+    "slip": {
+      "id": 77,
+      "advice": "Mercy is the better part of justice."
+    }
+  }]
+}
 
 export default function ApiAdvices() {
-  const [advice, setAdvice] = useState('');
+  const [ conteudo, setConteudo ] = useState(<>Carregando...</>)
 
-  async function fetchAdvice() {
-    try {
-      const response = await fetch('https://api.adviceslip.com/advice');
-      const data = await response.json();
-      setAdvice(data.slip.advice);
-    } catch (error) {
-      console.error('Erro ao buscar conselho:', error);
-    }
+  async function getAdvice() {
+    return mock;
+  }
+
+  async function buildAdvice() {
+    const consult = await getAdvice();
+
+    return consult.results.map(
+      advices => 
+        <>
+          { advices.slip.advice }
+        </>
+    );
   }
 
   useEffect(() => {
-    fetchAdvice();
-  }, []);
+    async function getConteudo() {
+      setConteudo(await buildAdvice())
+    }
+
+    getConteudo();
+  }, [])
 
   return (
-    <div id='api'>
-      <h1 id='api-title'>Conselho do Dia</h1>
-      <p id='advice'>
-        <div id='point'></div>
-        <span id='text'>"{advice ? advice : 'Carregando...'}"</span>
-      </p>
-      <button onClick={fetchAdvice}>Obter novo conselho</button>
+    <div className='api'>
+      { conteudo }
     </div>
-  );
+  )
 }
